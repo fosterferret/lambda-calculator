@@ -9,17 +9,28 @@ import NumberButton from "../NumberButtons/NumberButton";
 const Numbers = () => {
   // STEP 2 - add the imported data to state
   const [setNumbers] = useState(numbers);
+  console.log(numbers);
   return (
     <div className="numbers-container">
-    { setNumbers.map((num, index) => { 
-      index !== 9 
-      ?
-      <NumberButton key={ index } symbol={ num } setDisplay={ setDisplay } display={ display } /> 
-      : 
-      <NumberButton key={ index } symbol={ num } name='zero-button' 
-      setDisplay={ setDisplay } display={ display } /> 
-    })}
-  </div>
+      {setNumbers.map((num, index) => {
+        index !== 9 ? (
+          <NumberButton
+            key={index}
+            symbol={num}
+            setDisplay={setDisplay}
+            display={display}
+          />
+        ) : (
+          <NumberButton
+            key={index}
+            symbol={num}
+            name="zero-button"
+            setDisplay={setDisplay}
+            display={display}
+          />
+        );
+      })}
+    </div>
   );
 };
 
