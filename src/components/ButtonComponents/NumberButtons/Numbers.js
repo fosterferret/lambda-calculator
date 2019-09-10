@@ -12,7 +12,7 @@ const Numbers = () => {
   return (
     <div className="numbers-container">
     { setNumbers.map((num, index) => { 
-      return index !== 9 
+      index !== 9 
       ?
       <NumberButton key={ index } symbol={ num } setDisplay={ setDisplay } display={ display } /> 
       : 
