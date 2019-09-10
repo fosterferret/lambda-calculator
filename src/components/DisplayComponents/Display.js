@@ -1,10 +1,9 @@
 import React from "react";
 
-const Display = ({ totalValue }) => {
+const Display = ({ result }) => {
   return (
     <div className="display">
-      {" "}
-      <div className="displayDigit">{totalValue}</div>
+      <div className="displayDigit">{result}</div>
     </div>
   );
 };

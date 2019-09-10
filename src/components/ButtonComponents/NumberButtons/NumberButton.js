@@ -1,15 +1,16 @@
 import React from "react";
 
-const NumberButton = ({ name, symbol, setDisplay, display }) => {
+const NumberButton = ({ name, num, setDisplay, display }) => {
   const buttonClick = () => {
-    setDisplay(display + symbol);
+    setDisplay(display + num);
   };
-  const buttonValue = `number-button ${name}`;
+  const buttonLabel = `number-button ${name}`;
   return (
-    <div className={buttonValue} onClick={() => buttonClick()}>
-      {symbol}
+    <div className={buttonLabel} onClick={() => buttonClick()}>
+      {num}
     </div>
   );
 };
 
 export default NumberButton;
+

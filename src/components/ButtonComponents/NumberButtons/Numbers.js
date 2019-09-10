@@ -6,29 +6,25 @@ import NumberButton from "../NumberButtons/NumberButton";
 
 //Import your array data to from the provided data file
 
-const Numbers = () => {
-  // STEP 2 - add the imported data to state
-  const [setNumbers] = useState(numbers);
-  console.log(numbers);
+const Numbers = ({ setDisplay, display }) => {
   return (
-    <div className="numbers-container">
-      {setNumbers.map((num, index) => {
-        index !== 9 ? (
+    <div className="nums-container">
+      {numbers.map((num, index) => {
+        return index !== 9 ? (
           <NumberButton
             key={index}
-            symbol={num}
+            num={num}
             setDisplay={setDisplay}
             display={display}
           />
-        ) : (
+        ) : 
           <NumberButton
             key={index}
-            symbol={num}
+            num={num}
             name="zero-button"
             setDisplay={setDisplay}
             display={display}
           />
-        );
       })}
     </div>
   );
